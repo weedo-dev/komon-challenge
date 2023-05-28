@@ -1,0 +1,31 @@
+[
+  {
+    "ID": 1,
+    "connections": [
+      {
+        "Posts": [
+          {
+            "copy": "Post 1 caption",
+            "image": "https://example.com/post1-image.jpg"
+          },
+          {
+            "copy": "Post 2 caption",
+            "image": "https://example.com/post2-image.jpg"
+          }
+        ],
+        "engagement_rate": 0.05,
+        "followers": 5000,
+        "impressions": 10000,
+        "name": "Connection 1",
+        "platform": "Platform 1",
+        "profile_picture": "https://example.com/connection1-profile.jpg",
+        "url": "https://example.com/platform1"
+      }
+    ],
+    "email": "user1@example.com",
+    "members": 1000,
+    "name": "User One",
+    "profile_picture": "https://example.com/user1-profile.jpg",
+    "username": "user1"
+  }
+]

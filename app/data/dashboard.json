@@ -1,0 +1,42 @@
+{
+  "quotes": [
+    {
+      "author": "Author 1",
+      "id": 1,
+      "quote": "Example quote 1",
+      "url": "https://example.com/quote1"
+    },
+    {
+      "author": "Author 2",
+      "id": 2,
+      "quote": "Example quote 2",
+      "url": "https://example.com/quote2"
+    },
+    {
+      "author": "Author 3",
+      "id": 3,
+      "quote": "Example quote 3",
+      "url": "https://example.com/quote3"
+    }
+  ],
+  "top_communities": [
+    {
+      "bg_image": "https://example.com/quote3",
+      "category": "Category 1",
+      "id": 1,
+      "name": "Community 1"
+    },
+    {
+      "bg_image": "https://example.com/quote3",
+      "category": "Category 2",
+      "id": 2,
+      "name": "Community 2"
+    },
+    {
+      "bg_image": "https://example.com/quote3",
+      "category": "Category 3",
+      "id": 3,
+      "name": "Community 3"
+    }
+  ]
+}
