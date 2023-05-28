@@ -23,7 +23,8 @@
       }
     ],
     "email": "user1@example.com",
-    "members": 1000,
+    "members_quantity": 1000,
+    "members_variation": 3,
     "name": "User One",
     "profile_picture": "https://example.com/user1-profile.jpg",
     "username": "user1"

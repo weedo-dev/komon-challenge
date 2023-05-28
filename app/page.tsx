@@ -1,6 +1,7 @@
-import { NextFetchEvent } from "next/server";
 import fetchData from "../app/utils/fetchData";
-import { useEffect } from "react";
+import getRandomQuote from "./utils/getRandomQuotes";
+
+import UserProfileData from "./components/dashboard/UserProfileData";
 
 type Post = {
   image: string;
@@ -23,20 +24,47 @@ type User = {
   username: string;
   name: string;
   email: string;
-  members: number;
+  members_quantity: number;
+  members_variation: number;
   profile_picture: string;
   connections: Connection[];
 };
 
 type UsersData = User[];
 
+type Quote = {
+  id: number;
+  quote: string;
+  author: string;
+  url: string;
+};
+
+type Community = {
+  id: number;
+  name: string;
+  category: string;
+};
+
+type DashboardData = {
+  quotes: Quote[];
+  communities: Community[];
+};
+
 export default async function Home() {
   const users: UsersData = fetchData("users");
   const user: User = users[0];
 
+  const dashboardData: DashboardData = fetchData("dashboard");
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-red-600">Hello {user?.username}</h1>
+    <main className="flex min-h-screen flex-col items-center justify-between py-24">
+      <UserProfileData
+        username={user.username}
+        members_quantity={user.members_quantity}
+        members_variation={user.members_variation}
+        profile_picture={user.profile_picture}
+        quote={getRandomQuote(dashboardData.quotes)}
+      ></UserProfileData>
     </main>
   );
 }
