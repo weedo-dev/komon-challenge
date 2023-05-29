@@ -1,4 +1,4 @@
-import { ArrowSmallRightIcon } from "@/app/utils/icons";
+import { ArrowSmallRightIcon } from "@/app/components/utils/icons";
 
 export default function MembersVariationHint({
   members_variation,
@@ -20,10 +20,11 @@ export default function MembersVariationHint({
       </p>
       <span>
         <a
-          className="text-xs font-euclid font-medium cursor-not-allowed hover:text-slate-500 "
-          href="#"
+          className="cursor-not-allowed font-euclid text-xs font-medium underline decoration-sky-500 hover:text-slate-500 hover:decoration-slate-500 "
+          href={undefined}
         >
-          Explore Analytics <ArrowSmallRightIcon className="h-4 w-4 inline" />
+          Explore Analytics
+          <ArrowSmallRightIcon className="ml-0.5 inline h-4 w-4" />
         </a>
       </span>
     </div>

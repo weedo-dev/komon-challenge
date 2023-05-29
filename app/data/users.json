@@ -1,9 +1,10 @@
 [
   {
-    "ID": 1,
+    "id": 1,
     "connections": [
       {
-        "Posts": [
+        "id": 1,
+        "posts": [
           {
             "copy": "Post 1 caption",
             "image": "https://example.com/post1-image.jpg"
@@ -16,8 +17,8 @@
         "engagement_rate": 0.05,
         "followers": 5000,
         "impressions": 10000,
-        "name": "Connection 1",
-        "platform": "Platform 1",
+        "name": "virtual_coder",
+        "platform": "Instagram",
         "profile_picture": "https://placebeard.it/300x300",
         "url": "https://example.com/platform1"
       }
@@ -27,6 +28,6 @@
     "members_variation": 3,
     "name": "User One",
     "profile_picture": "https://placebeard.it/300x300",
-    "username": "user1"
+    "username": "virtual_coder"
   }
 ]

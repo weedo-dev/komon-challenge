@@ -31,9 +31,23 @@
       "url": "https://example.com/quote3"
     }
   ],
+  "platforms": [
+    {
+      "base_url": "https://example.com/platform2",
+      "name": "Facebook"
+    },
+    {
+      "base_url": "https://example.com/platform3",
+      "name": "Linkedin"
+    },
+    {
+      "base_url": "https://example.com/platform1",
+      "name": "Instagram"
+    }
+  ],
   "top_communities": [
     {
-      "bg_image": "https://example.com/quote3",
+      "bg_image": "https://placekitten.com/300/360",
       "category": "Category 1",
       "id": 1,
       "name": "Community 1"
