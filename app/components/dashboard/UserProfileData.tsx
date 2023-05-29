@@ -1,3 +1,8 @@
+import { ArrowSmallRightIcon, UserGroupIcon } from "@/app/utils/icons";
+import MembersVariationHint from "./MembersVariationHint";
+import ClipPathProfilePicture from "./ClipPathProfilePicture";
+import ActionableQuote from "./ActionableQuote";
+
 type Quote = {
   id: number;
   quote: string;
@@ -21,20 +26,26 @@ export default function UserProfileData({
   quote,
 }: UserProfileDataProps): JSX.Element {
   return (
-    <div className="grid grid-cols-3 w-full">
-      <div className=" col-span-2">
-        <h1 className="text-2xl font-semibold md:text-5xl">{username}</h1>
-        <p>Members: {members_quantity}</p>
-        <p>Members Variation: {members_variation}</p>
-
-        <p>Quote: {quote?.quote}</p>
-        <p>
-          Author: {quote?.author} <a href={quote?.url}>Read more</a>
-        </p>
+    <div className="flex justify-between w-full text-black">
+      <div className="grow-0">
+        <h1 className="text-2xl font-euclid font-bold md:text-5xl bg-clip-text text-transparent bg-gradient-to-br from-pink-500 via-purple-600 to-pink-500">
+          Hey! {username}
+        </h1>
+        <div className="md:max-w-[330px] mt-8">
+          <div className="flex gap-2 ">
+            <UserGroupIcon className="h-12 w-12 inline" />
+            <div>
+              <p className="font-euclid font-normal text-2xl ">
+                There are{" "}
+                <span className="font-medium">{members_quantity}</span> members
+                in your community!
+              </p>
+              <MembersVariationHint members_variation={members_variation} />
+            </div>
+          </div>
+        </div>
       </div>
-      <div className="col-span-1 border">
-        <img src={profile_picture} alt="Profile Picture" />
-      </div>
+      <ClipPathProfilePicture profile_picture={profile_picture} />
     </div>
   );
 }

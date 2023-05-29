@@ -2,6 +2,7 @@ import fetchData from "../app/utils/fetchData";
 import getRandomQuote from "./utils/getRandomQuotes";
 
 import UserProfileData from "./components/dashboard/UserProfileData";
+import ActionableQuote from "./components/dashboard/ActionableQuote";
 
 type Post = {
   image: string;
@@ -57,7 +58,7 @@ export default async function Home() {
   const dashboardData: DashboardData = fetchData("dashboard");
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between py-24">
+    <main className="flex min-h-screen flex-col items-center py-24">
       <UserProfileData
         username={user.username}
         members_quantity={user.members_quantity}
@@ -65,6 +66,7 @@ export default async function Home() {
         profile_picture={user.profile_picture}
         quote={getRandomQuote(dashboardData.quotes)}
       ></UserProfileData>
+      <ActionableQuote quote={getRandomQuote(dashboardData.quotes)} />
     </main>
   );
 }

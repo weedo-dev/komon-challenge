@@ -1,7 +1,24 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import localFont from "@next/font/local";
 
-const inter = Inter({ subsets: ["latin"] });
+const euclid = localFont({
+  src: [
+    {
+      path: "./fonts/EuclidFlex-Regular.ttf",
+      weight: "400",
+    },
+    {
+      path: "./fonts/EuclidFlex-Medium.ttf",
+      weight: "500",
+    },
+    {
+      path: "./fonts/EuclidFlex-Bold.ttf",
+      weight: "700",
+    },
+  ],
+  display: "swap",
+  variable: "--font-euclid",
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -14,9 +31,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${euclid.variable}`}>
       <body className="flex justify-center bg-white">
-        <div className="shadow-xl px-24 bg-white m-w-4xl w-3/5">{children}</div>
+        <div className="shadow-xl px-12 bg-white m-w-4xl w-3/5">{children}</div>
       </body>
     </html>
   );

@@ -18,7 +18,7 @@
         "impressions": 10000,
         "name": "Connection 1",
         "platform": "Platform 1",
-        "profile_picture": "https://example.com/connection1-profile.jpg",
+        "profile_picture": "https://placebeard.it/300x300",
         "url": "https://example.com/platform1"
       }
     ],
@@ -26,7 +26,7 @@
     "members_quantity": 1000,
     "members_variation": 3,
     "name": "User One",
-    "profile_picture": "https://example.com/user1-profile.jpg",
+    "profile_picture": "https://placebeard.it/300x300",
     "username": "user1"
   }
 ]

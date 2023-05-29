@@ -1,21 +1,33 @@
 {
   "quotes": [
     {
-      "author": "Author 1",
+      "author": "Steve Jobs",
       "id": 1,
-      "quote": "Example quote 1",
+      "quote": "The only way to do great work is to love what you do.",
       "url": "https://example.com/quote1"
     },
     {
-      "author": "Author 2",
+      "author": "Walt Disney",
       "id": 2,
-      "quote": "Example quote 2",
+      "quote": "The best way to get started is to quit talking and begin doing.",
       "url": "https://example.com/quote2"
     },
     {
-      "author": "Author 3",
+      "author": "John D. Rockefeller",
       "id": 3,
-      "quote": "Example quote 3",
+      "quote": "Don't be afraid to give up the good to go for the great.",
+      "url": "https://example.com/quote3"
+    },
+    {
+      "author": "Albert Einstein",
+      "id": 4,
+      "quote": "Creativity is intelligence having fun.",
+      "url": "https://example.com/quote3"
+    },
+    {
+      "author": "Herman Cain",
+      "id": 5,
+      "quote": "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.",
       "url": "https://example.com/quote3"
     }
   ],
