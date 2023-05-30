@@ -47,22 +47,22 @@
   ],
   "top_communities": [
     {
-      "bg_image": "https://placekitten.com/300/360",
-      "category": "Category 1",
+      "image": "https://storage.googleapis.com/komon-client-production/h6at0g949ebikme8tby4lti16ah4",
+      "name": "Olivia Rivers",
       "id": 1,
-      "name": "Community 1"
+      "category": "Visual Arts"
     },
     {
-      "bg_image": "https://example.com/quote3",
-      "category": "Category 2",
+      "image": "https://storage.googleapis.com/komon-client-production/gayee53zmodg0slg47fga16ib23q",
+      "name": "Max Knight",
       "id": 2,
-      "name": "Community 2"
+      "category": "Photography"
     },
     {
-      "bg_image": "https://example.com/quote3",
-      "category": "Category 3",
+      "image": "https://storage.googleapis.com/komon-client-production/7wg2o9pxi6fx6ixrocvmwt4xgkel",
+      "name": "Ryder Stone",
       "id": 3,
-      "name": "Community 3"
+      "category": "Music"
     }
   ]
 }

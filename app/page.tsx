@@ -1,11 +1,11 @@
 import { fetchData } from "../app/utils/fetchData";
 import getRandomQuote from "./utils/getRandomQuotes";
 
-import UserProfileData from "./components/dashboard/UserProfileData";
-import ActionableQuote from "./components/dashboard/ActionableQuote";
-import CreateSection from "./components/dashboard/CreateSection";
-import ConnectionsSection from "./components/dashboard/ConnectionsSection";
-import TopCommunitiesSection from "./components/dashboard/TopCommunitiesSection";
+import UserProfileData from "./dashboard/components/UserProfileData";
+import ActionableQuote from "./dashboard/components/ActionableQuote";
+import CreateSection from "./dashboard/components/CreateSection";
+import ConnectionsSection from "./dashboard/components/ConnectionsSection";
+import TopCommunitiesSection from "./dashboard/components/TopCommunitiesSection";
 
 export default async function Home() {
   const users: UsersData = await fetchData("users");

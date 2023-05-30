@@ -1,4 +1,4 @@
-import { ArrowSmallRightIcon } from "@/app/components/utils/icons";
+import { ArrowSmallRightIcon } from "@/app/global/components/icons";
 
 type Quote = {
   id: number;
@@ -19,7 +19,7 @@ export default function ActionableQuote({
         {`By "${quote?.author}" `}
         <span>
           <a
-            className="cursor-not-allowed font-euclid text-xs font-medium underline hover:text-slate-500 hover:decoration-slate-500 group-hover:decoration-sky-500  "
+            className="cursor-not-allowed font-euclid text-xs font-medium underline hover:text-slate-500 group-hover:decoration-sky-500 group-hover:hover:decoration-slate-500  "
             href={undefined}
           >
             Learn more

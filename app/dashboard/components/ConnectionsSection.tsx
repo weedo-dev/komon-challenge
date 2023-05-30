@@ -1,6 +1,6 @@
-import TitleH2 from "../utils/TitleH2";
+import TitleH2 from "../../global/components/TitleH2";
 import Image from "next/image";
-import { PlusIcon } from "../utils/icons";
+import { PlusIcon } from "../../global/components/icons";
 
 export default function ConnectionsSection({
   connections,
@@ -32,7 +32,7 @@ export default function ConnectionsSection({
           );
         })}
         <div className="flex flex-col items-center gap-1">
-          <div className="flex h-[90px] w-[90px] cursor-pointer items-center justify-center rounded-full bg-slate-900 text-6xl text-white hover:bg-gradient-to-br hover:from-pink-500 hover:via-purple-600 hover:to-pink-500">
+          <div className="aspect-h-1 aspect-w-1 flex max-h-[90px] w-full max-w-[90px] cursor-pointer items-center justify-center rounded-full bg-slate-900 text-6xl text-white hover:bg-gradient-to-br hover:from-pink-500 hover:via-purple-600 hover:to-pink-500">
             <PlusIcon className="p-6" />
           </div>
           <div>
