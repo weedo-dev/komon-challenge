@@ -1,4 +1,4 @@
-import { ArrowSmallRightIcon } from "@/app/global/components/icons";
+import { ArrowSmallRightIcon } from "@/app/global/components/Icons";
 
 export default function MembersVariationHint({
   members_variation,
@@ -13,7 +13,9 @@ export default function MembersVariationHint({
         <span
           className={members_variation > 0 ? "text-green-600" : "text-red-600"}
         >
-          {members_variation}
+          {members_variation > 0
+            ? members_variation
+            : Math.abs(members_variation)}
           {members_variation > 0 ? " more" : " fewer"}
         </span>{" "}
         members than last month!

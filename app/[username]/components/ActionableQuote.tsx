@@ -1,4 +1,4 @@
-import { ArrowSmallRightIcon } from "@/app/global/components/icons";
+import { ArrowSmallRightIcon } from "@/app/global/components/Icons";
 
 type Quote = {
   id: number;

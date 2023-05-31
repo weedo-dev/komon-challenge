@@ -20,13 +20,14 @@ export default function TopCommunitiesSection({
                 <div className="group relative cursor-not-allowed overflow-hidden rounded-md bg-cover">
                   <div className="relative">
                     <Image
+                      className="aspect-[4/5] object-cover"
                       src={community.image}
                       alt={`${community.name} cover photo`}
                       width={600}
                       height={600}
                     ></Image>
                   </div>
-                  <div className="invisible absolute bg-black opacity-50 group-hover:visible"></div>
+                  <div className="invisible absolute inset-0 bg-black opacity-50 group-hover:visible"></div>
                   <div className="invisible absolute inset-0 flex flex-col items-center justify-center text-white group-hover:visible">
                     <h3 className="text-center text-2xl font-medium text-white">
                       {community.name}

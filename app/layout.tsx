@@ -1,5 +1,5 @@
 import "./globals.css";
-import localFont from "@next/font/local";
+import localFont from "next/font/local";
 
 const euclid = localFont({
   src: [
@@ -33,7 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${euclid.variable}`}>
       <body className="flex justify-center bg-white">
-        <div className="shadow-xl px-12 bg-white m-w-4xl w-3/5">{children}</div>
+        <div className="m-w-4xl min-h-screen w-3/5 bg-white px-12 shadow-xl">
+          {children}
+        </div>
       </body>
     </html>
   );

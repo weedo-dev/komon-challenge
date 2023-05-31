@@ -30,18 +30,15 @@ type AppData = {
 type Connection = {
   id: number;
   platform: string;
-  url: string;
   name: string;
-  followers: number;
-  impressions: number;
-  engagement_rate: number;
   profile_picture: string;
-  Posts: Post[];
+  posts: Post[];
 };
 
 type Post = {
   image: string;
   copy: string;
+  id: number;
 };
 
 // User types
