@@ -5,7 +5,10 @@ import Image from "next/image";
 import { PlusIcon } from "../../global/components/Icons";
 import Link from "next/link";
 import { useState } from "react";
-import newConnection from "../newConnection";
+import Modal from "@/app/global/components/Modal";
+import NewConnectionModal from "./NewConnectionModal";
+
+
 
 export default function ConnectionsSection({
   connections,
@@ -16,6 +19,12 @@ export default function ConnectionsSection({
 }) {
   const [currentConnections, setCurrenConnections] =
     useState<Connection[]>(connections);
+
+    const [showModal, setShowModal] = useState<boolean>(false);
+
+    function toggleModal() {
+      setShowModal(!showModal);
+    }
 
   return (
     <div className="w-full">
@@ -45,7 +54,7 @@ export default function ConnectionsSection({
         })}
         <div
           className="flex cursor-pointer flex-col items-center gap-1"
-          onClick={newConnection}
+          onClick={toggleModal}
         >
           <div className="aspect-h-1 aspect-w-1 flex max-h-[90px] w-full max-w-[90px] cursor-pointer items-center justify-center rounded-full bg-slate-900 text-6xl text-white hover:bg-gradient-to-br hover:from-pink-500 hover:via-purple-600 hover:to-pink-500">
             <PlusIcon className="p-6" />
@@ -55,6 +64,11 @@ export default function ConnectionsSection({
           </div>
         </div>
       </div>
+      {showModal ? (<>
+              <Modal>
+                <NewConnectionModal toggleModal={toggleModal} />
+              </Modal></>
+            ) : null}
     </div>
   );
 }

@@ -32,6 +32,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${euclid.variable}`}>
+      <div id="modal"></div>
       <body className="flex justify-center bg-white">
         <div className="m-w-4xl min-h-screen w-3/5 bg-white px-12 shadow-xl">
           {children}
