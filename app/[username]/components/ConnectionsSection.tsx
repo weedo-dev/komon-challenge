@@ -18,7 +18,7 @@ export default function ConnectionsSection({
 }) {
   const [currentConnections, setCurrentConnections] = useState<
     Connection[] | null
-  >(null);
+  >(connections);
   const [showModal, setShowModal] = useState<boolean>(false);
 
   useEffect(() => {

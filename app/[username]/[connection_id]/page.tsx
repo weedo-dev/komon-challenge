@@ -52,7 +52,7 @@ export default async function ConnectionPage({
           ></Image>
         </div>
         <div>
-          <h1 className="font-euclid text-4xl font-bold">{user.username}</h1>
+          <h1 className="font-euclid text-4xl font-bold">{connection.name}</h1>
           <p className="font-sm font medium text-sky-500">
             {connection.platform}
           </p>
