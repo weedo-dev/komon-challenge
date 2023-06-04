@@ -2,7 +2,7 @@
 
 import TitleH2 from "../../utils/components/TitleH2";
 import Image from "next/image";
-import { PlusIcon } from "../../utils/components/Icons";
+import { PlusIcon } from "../../utils/components/CustomIcons";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Modal from "@/app/utils/components/Modal";

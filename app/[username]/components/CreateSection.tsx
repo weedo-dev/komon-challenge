@@ -2,7 +2,7 @@ import TitleH2 from "../../utils/components/TitleH2";
 import {
   CalendarDaysIcon,
   ChevronDoubleUpIcon,
-} from "../../utils/components/Icons";
+} from "../../utils/components/CustomIcons";
 
 export default function CreateSection() {
   return (

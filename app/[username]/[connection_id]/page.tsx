@@ -9,7 +9,7 @@ import ConnectionsSection from "../components/ConnectionsSection";
 import TopCommunitiesSection from "../components/TopCommunitiesSection";
 import YouAreLost from "../components/YouAreLost";
 import DisplayPosts from "./components/DisplayPosts";
-import { ArrowSmallLeftIcon } from "@/app/utils/components/Icons";
+import { ArrowSmallLeftIcon } from "@/app/utils/components/CustomIcons";
 
 export default async function ConnectionPage({
   params,
