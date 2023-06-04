@@ -2,7 +2,7 @@ type EndpointsType = "users" | "app";
 
 export async function fetchData(endpoint: EndpointsType) {
   const res = await fetch(`http://localhost:3000/api/${endpoint}`, {
-    next: { revalidate: 10 },
+    next: { revalidate: 1 },
   });
 
   if (!res.ok) {

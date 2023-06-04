@@ -7,8 +7,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Modal from "@/app/global/components/Modal";
 import NewConnectionModal from "./NewConnectionModal";
-
-
+import { fetchData } from "@/app/utils/fetchData";
 
 export default function ConnectionsSection({
   connections,
@@ -17,14 +16,14 @@ export default function ConnectionsSection({
   connections: Connection[];
   username: string;
 }) {
-  const [currentConnections, setCurrenConnections] =
+  const [currentConnections, setCurrentConnections] =
     useState<Connection[]>(connections);
 
-    const [showModal, setShowModal] = useState<boolean>(false);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
-    function toggleModal() {
-      setShowModal(!showModal);
-    }
+  async function toggleModal() {
+    setShowModal(!showModal);
+  }
 
   return (
     <div className="w-full">
@@ -36,7 +35,10 @@ export default function ConnectionsSection({
               key={connection.id}
               className="flex flex-col items-center gap-1"
             >
-              <Link href={`${username}/${connection.id}`}>
+              <Link
+                href={`${username}/${connection.id}`}
+                className="group flex flex-col items-center"
+              >
                 <Image
                   src={connection.profile_picture}
                   alt={`${connection.platform} ${connection.name} Profile Picture`}
@@ -45,8 +47,12 @@ export default function ConnectionsSection({
                   className="rounded-full"
                 ></Image>
                 <div>
-                  <p className="text-center font-medium">{connection.name}</p>
-                  <p className="text-center text-xs">{connection.platform}</p>
+                  <p className="text-center font-euclid font-medium group-hover:bg-gradient-to-br group-hover:from-pink-500 group-hover:via-purple-600 group-hover:to-pink-500 group-hover:bg-clip-text group-hover:text-transparent">
+                    {connection.name}
+                  </p>
+                  <p className="text-center font-euclid text-xs">
+                    {connection.platform}
+                  </p>
                 </div>
               </Link>
             </div>
@@ -60,15 +66,19 @@ export default function ConnectionsSection({
             <PlusIcon className="p-6" />
           </div>
           <div>
-            <p className="text-center text-sm font-medium">New Connection</p>
+            <p className="text-center font-euclid text-sm font-medium">
+              New Connection
+            </p>
           </div>
         </div>
       </div>
-      {showModal ? (<>
-              <Modal>
-                <NewConnectionModal toggleModal={toggleModal} />
-              </Modal></>
-            ) : null}
+      {showModal ? (
+        <>
+          <Modal>
+            <NewConnectionModal toggleModal={toggleModal} username={username} />
+          </Modal>
+        </>
+      ) : null}
     </div>
   );
 }

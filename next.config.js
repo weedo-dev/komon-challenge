@@ -9,6 +9,7 @@ const nextConfig = {
       "placebear.com",
     ],
   },
+  experimental: { appDir: true },
 };
 
 module.exports = nextConfig;

@@ -7,7 +7,7 @@ export default function TopCommunitiesSection({
   communities: Community[];
 }) {
   return (
-    <div className="w-full">
+    <div className="w-full font-euclid">
       <TitleH2 title="Top Communities of the Week" />
       <div className="grid grid-cols-3 gap-8">
         {communities.map((community) => {

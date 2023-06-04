@@ -6,7 +6,7 @@ import {
 
 export default function CreateSection() {
   return (
-    <div className="w-full">
+    <div className="w-full font-euclid">
       <TitleH2 title="Share with your community" />
       <div className="mt-4 grid grid-cols-3 gap-4">
         <div className="group cursor-not-allowed rounded-lg border bg-slate-900 px-2 py-2 hover:bg-slate-300">
