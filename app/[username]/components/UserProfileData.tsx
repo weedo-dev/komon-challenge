@@ -1,4 +1,4 @@
-import { UserGroupIcon } from "@/app/global/components/Icons";
+import { UserGroupIcon } from "@/app/utils/components/Icons";
 import MembersVariationHint from "./MembersVariationHint";
 import ClipPathProfilePicture from "./ClipPathProfilePicture";
 

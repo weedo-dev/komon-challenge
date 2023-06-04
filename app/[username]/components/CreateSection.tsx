@@ -1,8 +1,8 @@
-import TitleH2 from "../../global/components/TitleH2";
+import TitleH2 from "../../utils/components/TitleH2";
 import {
   CalendarDaysIcon,
   ChevronDoubleUpIcon,
-} from "../../global/components/Icons";
+} from "../../utils/components/Icons";
 
 export default function CreateSection() {
   return (

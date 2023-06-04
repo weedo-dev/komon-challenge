@@ -1,5 +1,5 @@
 import Image from "next/image";
-import TitleH2 from "../../global/components/TitleH2";
+import TitleH2 from "../../utils/components/TitleH2";
 
 export default function TopCommunitiesSection({
   communities,

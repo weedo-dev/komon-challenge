@@ -1,11 +1,11 @@
 "use client";
 
-import TitleH2 from "../../global/components/TitleH2";
+import TitleH2 from "../../utils/components/TitleH2";
 import Image from "next/image";
-import { PlusIcon } from "../../global/components/Icons";
+import { PlusIcon } from "../../utils/components/Icons";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Modal from "@/app/global/components/Modal";
+import Modal from "@/app/utils/components/Modal";
 import NewConnectionModal from "./NewConnectionModal";
 import { fetchData, fetchUserData } from "@/app/utils/fetchData";
 

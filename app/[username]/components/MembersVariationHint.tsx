@@ -1,4 +1,4 @@
-import { ArrowSmallRightIcon } from "@/app/global/components/Icons";
+import { ArrowSmallRightIcon } from "@/app/utils/components/Icons";
 
 export default function MembersVariationHint({
   members_variation,
