@@ -1,4 +1,4 @@
-import { fetchData } from "../../app/utils/fetchData";
+import { fetchData, fetchUserData } from "../../app/utils/fetchData";
 import getRandomQuote from "./../utils/getRandomQuotes";
 
 import UserProfileData from "./components/UserProfileData";
@@ -13,30 +13,27 @@ export default async function UsernamePage({
 }: {
   params: { username: string };
 }) {
-  const users: UsersData = await fetchData("users");
-  const user: User | undefined = users.find(
-    (user) => user.username === params.username
-  );
+  const userData = await fetchUserData(params.username);
 
   const appData: AppData = await fetchData("app");
 
-  if (!user) {
+  if (!userData) {
     return <YouAreLost></YouAreLost>;
   }
 
   return (
     <main className="flex min-h-screen flex-col items-center gap-16 py-24">
       <UserProfileData
-        username={user.username}
-        members_quantity={user.members_quantity}
-        members_variation={user.members_variation}
-        profile_picture={user.profile_picture}
+        username={userData.username}
+        members_quantity={userData.members_quantity}
+        members_variation={userData.members_variation}
+        profile_picture={userData.profile_picture}
       ></UserProfileData>
       <ActionableQuote quote={getRandomQuote(appData.quotes)} />
       <CreateSection />
       <ConnectionsSection
-        connections={user.connections}
-        username={user.username}
+        connections={userData.connections}
+        username={userData.username}
       />
       <TopCommunitiesSection communities={appData.top_communities} />
     </main>

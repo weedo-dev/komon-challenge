@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from "react";
 import { fetchData } from "@/app/utils/fetchData";
 import saveNewConnection from "@/app/utils/saveNewConnection";
-import { useRouter } from "next/router";
 
 export default function NewConnectionModal({
   toggleModal,
@@ -24,10 +23,10 @@ export default function NewConnectionModal({
     platform: true,
   });
 
+  const [newConnectionLoading, setNewConnectionLoading] = useState(false);
+
   const nameRef = useRef<HTMLInputElement | null>(null);
   const platformRef = useRef<HTMLSelectElement | null>(null);
-
-  const router = useRouter();
 
   useEffect(() => {
     async function fetchPlatforms() {
@@ -42,22 +41,6 @@ export default function NewConnectionModal({
 
     fetchPlatforms();
   }, []);
-
-  // async function updateConnections() {
-  //   try {
-  //     const users: UsersData = await fetchData("users");
-  //     const user: User | undefined = users.find(
-  //       (user) => user.username === username
-  //     );
-  //     if (user) {
-  //       console.log(user.connections);
-  //       setCurrentConnections(user.connections);
-  //       toggleModal();
-  //     }
-  //   } catch (err) {
-  //     console.log("Error occurred when updating connections");
-  //   }
-  // }
 
   function handlePlatformChange(event: React.ChangeEvent<HTMLSelectElement>) {
     const platformValue = platformRef.current?.value;
@@ -79,12 +62,15 @@ export default function NewConnectionModal({
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    setNewConnectionLoading(true);
 
     if (inputError.name === true || inputError.platform === true) {
+      setNewConnectionLoading(false);
       return;
     } else {
       await saveNewConnection(formData);
-      toggleModal();
+      setTimeout(toggleModal, 1000);
+      setNewConnectionLoading(true);
     }
   }
 
@@ -141,7 +127,7 @@ export default function NewConnectionModal({
               type="submit"
               className="rounded-lg bg-slate-900 px-4 py-2 font-medium text-white hover:bg-sky-500 hover:text-black "
             >
-              Add Connection
+              {newConnectionLoading ? "Connecting.." : "Add Connection"}
             </button>
           </form>
         </div>
